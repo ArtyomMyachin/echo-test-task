@@ -1,0 +1,126 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px 24px 0;
+}
+
+.info__logo {
+    margin-left: -12px;
+}
+
+.info__contacts {
+    width: 177px;
+}
+
+.info__phone {
+    font: 18px "Europe Normal", sans-serif;
+    color: #eb5017;
+    text-decoration: none;
+}
+
+.main-menu__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    background: #231f20;
+}
+
+.main-menu__item {
+    border-right: 1px solid #eb5017;
+    padding: 12px 35px;
+    cursor: pointer;
+    /*max-height: 46px;*/
+}
+
+.main-menu__item:first-child {
+    padding-left: 63px;
+}
+
+.main-menu__item:last-child {
+    border-right: none;
+    padding-right: 63px;
+}
+
+.main-menu__item:hover {
+    background: #cd864d;
+}
+
+.main-menu__item.active-menu-item {
+    background: #eb5017;
+}
+
+.main-menu__link {
+    color: #fff;
+    font: 14px Arial, sans-serif;
+    text-decoration: none;
+}
+
+.main-wrap {
+    padding: 17px 20px;
+}
+
+.breadcrumbs {
+    padding-bottom: 23px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+.breadcrumbs__item {
+    color: #231f20;
+    font: 12px Arial, sans-serif;
+    margin-right: 3px;
+}
+
+.breadcrumbs__link {
+    color: #231f20;
+    font: 12px Arial, sans-serif;
+}
+
+.footer-menu {
+    width: 100%;
+    max-width: 1002px;
+    position: fixed;
+    top: calc(100vh - 55px);
+}
+
+.footer-menu__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 14px 0 30px 60px;
+    background: #231f20;
+}
+
+.footer-menu__item {
+    margin-right: 25px;
+}
+
+.footer-menu__link {
+    color: #fff;
+    font: 12px Arial, sans-serif;
+}
