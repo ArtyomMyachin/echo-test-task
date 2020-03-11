@@ -4,6 +4,14 @@
         <title>World bank</title>
         <link rel="stylesheet" href="src/css/style.css"/>
         <link href="http://allfont.ru/allfont.css?fonts=europe-normal" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                $( "#datepicker" ).datepicker();
+            } );
+        </script>
     </head>
     <body>
         <header class="header">
@@ -38,7 +46,41 @@
                         <span class="breadcrumbs__item">-</span>
                         <span class="breadcrumbs__item current-breadcrumb">Калькулятор</span>
                     </div>
-                    <div class="calculator"></div>
+                    <div class="calculator">
+                        <form action="" class="calculator__form">
+                            <h1 class="calculator__header">Калькулятор</h1>
+                            <div class="calculator-wrap">
+                                <div class="calculator__labels">
+                                    <label for="calculator__date" class="calculator__widget">Дата оформления вклада</label>
+                                    <label for="calculator__summ" class="calculator__widget">Сумма вклада</label>
+                                    <label for="calculator__time" class="calculator__widget">Срок вклада</label>
+                                    <span class="calculator__widget">Пополнение вклада</span>
+                                    <label for="calculator__summ-add" class="calculator__widget">Сумма пополнения вклада</label>
+                                </div>
+                                <div class="calculator__inputs">
+                                    <input type="date" id="calculator__date" class="calculator__text-field calculator__input" placeholder="дд.мм.гггг"/>
+                                    <input type="text" min="1000" max="3000000" id="calculator__summ" class="calculator__text-field calculator__input" placeholder="10 000"/>
+                                    <select id="calculator__time" class="calculator__select calculator__input">
+                                        <option value="1" class="calculator__option">1 год</option>
+                                        <option value="2" class="calculator__option">2 года</option>
+                                        <option value="3" class="calculator__option">3 года</option>
+                                        <option value="4" class="calculator__option">4 года</option>
+                                        <option value="5" class="calculator__option">5 лет</option>
+                                    </select>
+                                    <div class="calculator__radios calculator__input">
+                                        <input type="radio" name="add-flag" checked> Нет
+                                        <input type="radio" name="add-flag"> Да
+                                    </div>
+                                    <input type="text" min="1000" max="3000000" id="calculator__summ-add" class="calculator__text-field calculator__input" placeholder="10 000"/>
+                                </div>
+                                <div class="calculator__scrollbars"></div>
+                            </div>
+                            <div class="calculator__result">
+                                <button type="submit" class="calculator__calc-button">Рассчитать</button>
+                                <span class="calculator__result-text"></span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
