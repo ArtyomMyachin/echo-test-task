@@ -9,6 +9,7 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="https://atuin.ru/demo/ui-slider/jquery.ui.touch-punch.min.js"></script>
         <script src="./src/scripts/script.js"></script>
+        <script src="src/scripts/form.js"></script>
     </head>
     <body>
         <header class="header">
@@ -44,7 +45,7 @@
                         <span class="breadcrumbs__item current-breadcrumb">Калькулятор</span>
                     </div>
                     <div class="calculator">
-                        <form action="" class="calculator__form">
+                        <form action="/calc.php" method="post" class="calculator__form">
                             <h1 class="calculator__header">Калькулятор</h1>
                             <div class="calculator-wrap">
                                 <div class="calculator__labels">
@@ -55,8 +56,8 @@
                                     <label for="calculator__summ-add" class="calculator__widget">Сумма пополнения вклада</label>
                                 </div>
                                 <div class="calculator__inputs">
-                                    <input type="text" onchange="changeScrollbar('summ-scrollbar')" id="calculator__date" class="calculator__text-field calculator__input" placeholder="дд.мм.гггг"/>
-                                    <input type="text" min="1000" max="3000000" id="calculator__summ" class="calculator__text-field calculator__input" placeholder="10 000"/>
+                                    <input type="text" id="calculator__date" class="calculator__text-field calculator__input" placeholder="дд.мм.гггг"/>
+                                    <input type="text" name="summ" onchange="changeScrollbar('summ-scrollbar')" min="1000" max="3000000" id="calculator__summ" class="calculator__text-field calculator__input" placeholder="10 000"/>
                                     <select id="calculator__time" class="calculator__select calculator__input">
                                         <option value="1" class="calculator__option">1 год</option>
                                         <option value="2" class="calculator__option">2 года</option>
